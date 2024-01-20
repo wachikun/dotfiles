@@ -1,0 +1,8 @@
+set input-meta   on
+set output-meta  on
+set convert-meta on
+"\C-n":	history-search-forward
+"\C-p":	history-search-backward
+"\M-n":	next-history
+"\M-p":	previous-history
+"\M-h":	backward-kill-word

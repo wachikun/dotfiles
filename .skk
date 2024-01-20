@@ -1,0 +1,44 @@
+; -*- emacs-lisp -*-
+
+(setq skk-auto-start-henkan nil)
+
+(setq skk-server-host "localhost")
+(setq skk-server-report-response t)
+
+(setq skk-date-ad t)
+(setq skk-number-style nil)
+(setq skk-use-look t)
+(setq skk-share-private-jisyo t)
+(setq skk-henkan-strict-okuri-precedence t)
+
+(setq skk-use-jisx0201-input-method t)
+
+(setq skk-large-jisyo nil)
+
+(setq skk-rom-kana-rule-list '(("!" nil "!")
+			       (":" nil ":")
+			       (";" nil ";")
+			       ("?" nil "?")))
+
+(setq skk-jisx0201-rule-list '(("!" nil "!") ("\"" nil "\"") ("#" nil "#") ("%" nil "%") ("&" nil "&")
+			       ("'" nil "'") ("\(" nil "(") ("\)" nil ")") ("*" nil "*") ("+" nil "+")
+			       ("-" nil "ｰ")
+			       ("1" nil "1") ("2" nil "2") ("3" nil "3") ("4" nil "4") ("5" nil "5")
+			       ("6" nil "6") ("7" nil "7") ("8" nil "8") ("9" nil "9")
+			       (":" nil ":") (";" nil ";") ("<" nil "<") ("=" nil "=") (">" nil ">")
+			       ("?" nil "?") ("@" nil "@")
+			       ("A" nil "A") ("B" nil "B") ("C" nil "C") ("D" nil "D") ("E" nil "E")
+			       ("F" nil "F") ("G" nil "G") ("H" nil "H") ("I" nil "I") ("J" nil "J")
+			       ("K" nil "K") ("L" nil "L") ("M" nil "M") ("N" nil "N") ("O" nil "O")
+			       ("P" nil "P") ("Q" nil "Q") ("R" nil "R") ("S" nil "S") ("T" nil "T")
+			       ("U" nil "U") ("V" nil "V") ("W" nil "W") ("X" nil "X") ("Y" nil "Y")
+			       ("Z" nil "Z")
+			       ("^" nil "^") ("_" nil "_") ("`" nil "`") ("{" nil "{") ("|" nil "|")
+			       ("}" nil "}") ("~" nil "~") (" " nil " ")))
+
+(setq skk-search-excluding-word-pattern-function
+      #'(lambda (kakutei-word)
+	  ;; この関数が non-nil を返したときは、その文字列は個人
+	  ;; 辞書に取り込まれない。
+          (save-match-data
+	    (string-match "\\*$" skk-henkan-key))))

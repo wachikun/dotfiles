@@ -1,0 +1,9 @@
+Emacs.geometry: 140x47+0+0
+Emacs.menuBar: off
+Emacs.toolBar: 0
+Emacs.verticalScrollBars: off
+Emacs.useXIM: false
+Emacs.Font: IPAMincho-12
+XTerm*metaSendsEscape: true
+XTerm*faceName: Sony Fixed
+XTerm*faceSize: 10

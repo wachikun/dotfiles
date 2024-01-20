@@ -1,0 +1,7 @@
+(define bridge-show-input-state? #f)
+(define bridge-show-input-state-time-length 60)
+(define skk-use-candidate-window? #t)
+(define skk-candidate-selection-style 'ddskk-like)
+(define skk-use-skkserv? #t)
+(define skk-skkserv-hostname "localhost")
+(define skk-nr-candidate-max 7)
