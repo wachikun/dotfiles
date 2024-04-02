@@ -1,16 +1,29 @@
 (require 'gitgit)
 
+(setq auto-mode-alist (append '(("\\.texe" . texe-mode))
+                              auto-mode-alist))
+
 (defun OV ()
   (interactive)
   (let (buffer)
-    (mapc #'(lambda (a)
-              (unless buffer
+    (catch 'loop
+      (mapc #'(lambda (a)
                 (let (buffer-name)
                   (setq buffer-name (buffer-name a))
-                  (cond
-                   ((string-match "^\\*gitgit\\*.+ status$" buffer-name)
-                    (setq buffer buffer-name))))))
-          (buffer-list))
+                  (when (string-match "^\\*gitgit\\*.+ status$" buffer-name)
+                    (setq buffer buffer-name)
+                    (throw 'loop nil))))
+            (buffer-list)))
     (if buffer
         (switch-to-buffer buffer)
-      (message "buffer not found!"))))
+      (catch 'loop
+        (mapc #'(lambda (a)
+                  (let (buffer-name)
+                    (setq buffer-name (buffer-name a))
+                    (when (string-match "\\.texe$" buffer-name)
+                      (setq buffer buffer-name)
+                      (throw 'loop nil))))
+              (buffer-list)))
+      (if buffer
+          (switch-to-buffer buffer)
+        (message "buffer not found!")))))
