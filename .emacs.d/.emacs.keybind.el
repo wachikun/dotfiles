@@ -4,6 +4,7 @@
 (global-set-key "\C-h" 'delete-backward-char)
 (global-set-key "\M-h" 'backward-kill-word)
 (global-set-key "\C-l" 'only-recenter)
+(global-set-key "\C-xO" (lambda () (interactive) (other-window -1)))
 
 (global-unset-key "\C-\\")
 (global-unset-key "\C-xt")

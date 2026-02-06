@@ -1,5 +1,7 @@
 ;;; -*- lexical-binding: t; -*-
 
+(setq ring-bell-function 'ignore)
+
 (set-file-name-coding-system 'utf-8)
 
 (setq eval-expression-print-length nil)
@@ -16,7 +18,7 @@
 (setq next-line-add-newlines nil)
 
 (setq x-select-enable-primary t)
-(setq x-select-enable-clipboard nil)
+(setq x-select-enable-clipboard t)
 (setq select-active-regions nil)
 (setq delete-active-region nil)
 
