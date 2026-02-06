@@ -30,7 +30,7 @@
                       (advice-add 'rustic-format-buffer :around 'adviced-rustic-format-buffer)))(add-hook 'rustic-compilation-mode-hook
                     (lambda ()
                       (define-key rustic-compilation-mode-map "g"
-                                  'cheat-sheet-rerun))))
+                                  'texe-rerun))))
   (use-package lsp-rust
     :custom (lsp-rust-analyzer-cargo-watch-command "clippy")(lsp-rust-analyzer-server-display-inlay-hints
                                                              t)(lsp-rust-analyzer-display-chaining-hints

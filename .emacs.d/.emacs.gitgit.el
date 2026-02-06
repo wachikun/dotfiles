@@ -20,9 +20,12 @@
         (mapc #'(lambda (a)
                   (let (buffer-name)
                     (setq buffer-name (buffer-name a))
-                    (when (string-match "\\.texe$" buffer-name)
-                      (setq buffer buffer-name)
-                      (throw 'loop nil))))
+                    (when (string-match "\\.texe\\b" buffer-name)
+                      (with-current-buffer buffer-name
+                        (when (and (boundp 'texe-mode)
+                                   texe-mode)
+                          (setq buffer buffer-name)
+                          (throw 'loop nil))))))
               (buffer-list)))
       (if buffer
           (switch-to-buffer buffer)
