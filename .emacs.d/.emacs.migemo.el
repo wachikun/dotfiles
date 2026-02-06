@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (require 'migemo)
 
 (setq migemo-command (expand-file-name "~/local/cmigemo/bin/cmigemo"))

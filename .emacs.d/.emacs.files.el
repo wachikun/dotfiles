@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (setq backup-by-copying t)
 (setq delete-auto-save-files nil)
 

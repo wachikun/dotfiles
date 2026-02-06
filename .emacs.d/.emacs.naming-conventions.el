@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (defun to-snake ()
   (interactive)
   (let ((case-fold-search nil)

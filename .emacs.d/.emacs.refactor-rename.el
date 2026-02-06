@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (defvar refactor-rename--from-to nil)
 
 (defun refactor-rename ()

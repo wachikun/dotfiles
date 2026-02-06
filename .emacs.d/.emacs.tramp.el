@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (require 'tramp)
 (require 'tramp-sh)
 

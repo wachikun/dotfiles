@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (setq diff-default-read-only t)
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 (setq-default ediff-auto-refine-limit 100000)

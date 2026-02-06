@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (setq display-buffer-fallback-action '((display-buffer--maybe-same-window display-buffer-reuse-window
                                                                           display-buffer--maybe-pop-up-frame-or-window
                                                                           display-buffer-use-some-window display-buffer-pop-up-frame)))

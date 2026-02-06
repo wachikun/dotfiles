@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (setq org-startup-folded t)
 (setq org-image-actual-width '(400))
 (setq org-mode-hook '(lambda ()

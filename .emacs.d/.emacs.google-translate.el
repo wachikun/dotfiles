@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (require 'google-translate)
 
 (defun google-translate--search-tkk ()

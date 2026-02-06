@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (setq comint-input-ring-size 1024)
 
 (defadvice comint-next-matching-input-from-input

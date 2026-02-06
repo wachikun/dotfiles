@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (defun init-el-rustic ()
   (add-to-list 'exec-path
                (expand-file-name "~/.cargo/bin/"))

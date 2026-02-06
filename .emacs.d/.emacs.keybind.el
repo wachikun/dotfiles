@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (global-set-key "\C-x~" 'shrink-window)
 (global-set-key "\C-h" 'delete-backward-char)
 (global-set-key "\M-h" 'backward-kill-word)

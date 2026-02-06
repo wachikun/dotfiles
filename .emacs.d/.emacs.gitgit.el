@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (require 'gitgit)
 
 (setq auto-mode-alist (append '(("\\.texe" . texe-mode))

@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (autoload 'word-count-mode "word-count" "Minor mode to count words."
   t nil)
 (add-hook 'word-count-mode-hook

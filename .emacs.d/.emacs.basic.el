@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (set-file-name-coding-system 'utf-8)
 
 (setq eval-expression-print-length nil)
